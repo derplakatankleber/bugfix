@@ -1,0 +1,40 @@
+<html>
+<head>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<link rel="stylesheet" href="http://www.sceditor.com/minified/themes/default.min.css" type="text/css" media="all" />
+<script type="text/javascript" src="http://www.sceditor.com/minified/jquery.sceditor.xhtml.min.js"></script>
+<script>
+$(function() {
+    // Replace all textarea's
+    // with SCEditor
+    $("textarea").sceditor({
+        plugins: "xhtml",
+	style: "http://www.sceditor.com/minified/jquery.sceditor.default.min.css"
+    });
+});
+var clickme = function(){
+    alert(jQuery(jQuery('textarea')[0]).sceditor('instance').val())
+}
+</script>
+</head>
+<body>
+<h1>testpage</h1>
+<textarea id="textarea0" class="Xtextarea"  style="width: 600px; height: 300px; display: none;">
+<table>
+	<tbody>
+		<tr>
+			<td>
+				A 
+			</td><td></td>
+		</tr>
+		<tr>
+			<td></td><td>
+				B
+			</td>
+		</tr>
+	</tbody>
+</table>
+</textarea>
+<a  onclick="return clickme();" >Click to see textarea sourcecode</a>
+</body>
+</html>
